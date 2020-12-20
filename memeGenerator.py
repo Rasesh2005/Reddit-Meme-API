@@ -1,11 +1,11 @@
-from config import CLIENT_SECRET
 import praw
 from random import choice
-from config import *
+import os
 
-reddit = praw.Reddit(client_id=CLIENT_ID,
-                     client_secret=CLIENT_SECRET,
-                     user_agent=USER_AGENT,)
+reddit = praw.Reddit(client_id=os.getenv("CLIENT_ID"),
+                     client_secret=os.getenv("CLIENT_SECRET"),
+                     user_agent=os.getenv("USER_AGENT")
+                    )
 
 TOPICS = [  # Default Topics When No Topic is given!!
     "dankmemes",
