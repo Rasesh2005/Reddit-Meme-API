@@ -34,7 +34,7 @@ In order to get multiple memes in a single request specify the count with the fo
 
 Endpoint: [/meme_api/{count}](https://reddit-meme-api.herokuapp.com/meme_api/2)
 
-Example: [https://meme-api.herokuapp.com/gimme/2](https://reddit-meme-api.herokuapp.com/meme_api/2)
+Example: [https://reddit-meme-api.herokuapp.com/meme_api/2](https://reddit-meme-api.herokuapp.com/meme_api/2)
 
 Response:
 
@@ -118,7 +118,7 @@ In order to get a custom number of memes from a specific subreddit provide the n
 
 Endpoint: [/meme_api/{subreddit}/{count}](https://reddit-meme-api.herokuapp.com/meme_api/wholesomememes/2/)
 
-Example: [https://meme-api.herokuapp.com/gimme/wholesomememes/2](https://reddit-meme-api.herokuapp.com/meme_api/wholesomememes/2/)
+Example: [https://reddit-meme-api.herokuapp.com/meme_api/wholesomememes/2](https://reddit-meme-api.herokuapp.com/meme_api/wholesomememes/2/)
 
 Response:
 
