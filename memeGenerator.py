@@ -106,9 +106,3 @@ def ScrapMemes(topic=0, num=1):
             "message":str(type(e))+"=>"+str(e)
         }
 
-# sub=reddit.subreddit("dankmemes")
-# print(sub.spoilers_enabled)
-
-
-if __name__ == "__main__":
-    print(ScrapMemes(topic="ProgrammerHumor",num=3))
