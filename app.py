@@ -15,6 +15,10 @@ def meme_api():
 def meme_api_no(num):
     result=ScrapMemes(num=num)
     return jsonify(result)
+@app.route('/meme_api/<string:topic>/')
+def meme_api_no(topic):
+    result=ScrapMemes(topic=topic)
+    return jsonify(result)
 @app.route('/meme_api/<string:topic>/<int:num>/')
 def meme_api_topic_and_no(topic,num):
     result=ScrapMemes(topic=topic,num=num)
