@@ -34,18 +34,33 @@ def ScrapMemes(topic=0, num=1):
         if num == 1:
             subreddit = reddit.subreddit(topic)
             meme = subreddit.random()
-            result = {
-                "code":200,
-                "post_link": meme.shortlink,
-                "subreddit": topic,
-                "title": meme.title,
-                "url": meme.url,
-                "ups": meme.ups,
-                "author": meme.author.name,
-                "spoilers_enabled": subreddit.spoilers_enabled,
-                "nsfw": subreddit.over18,
-                "image_previews": [i["url"] for i in meme.preview.get("images")[0].get("resolutions")]
-            }
+            try:
+                _=meme.preview
+                result = {
+                    "code":200,
+                    "post_link": meme.shortlink,
+                    "subreddit": topic,
+                    "title": meme.title,
+                    "url": meme.url,
+                    "ups": meme.ups,
+                    "author": meme.author.name,
+                    "spoilers_enabled": subreddit.spoilers_enabled,
+                    "nsfw": subreddit.over18,
+                    "image_previews": [i["url"] for i in meme.preview.get("images")[0].get("resolutions")]
+                }
+            except:
+                item = {
+                        
+                        "post_link": meme.shortlink,
+                        "subreddit": topic,
+                        "title": meme.title,
+                        "url": meme.url,
+                        "ups": meme.ups,
+                        "author": meme.author.name,
+                        "spoilers_enabled": subreddit.spoilers_enabled,
+                        "nsfw": subreddit.over18,
+                        "image_previews": ["No Preview Found For This Meme.. Sorry For inconvenience"]
+                    }
         else:
             subreddit = reddit.subreddit(topic)
             submissions = subreddit.random_rising(limit=num)
@@ -80,7 +95,7 @@ def ScrapMemes(topic=0, num=1):
                         "author": meme.author.name,
                         "spoilers_enabled": subreddit.spoilers_enabled,
                         "nsfw": subreddit.over18,
-                        "image_previews": ["No Preview Found For This Meme.. Sorry For That"]
+                        "image_previews": ["No Preview Found For This Meme.. Sorry For inconvenience"]
                     }
                 result.get("memes").append(item)
         return result
@@ -88,7 +103,7 @@ def ScrapMemes(topic=0, num=1):
     except Exception as e:
         return {
             "code":400,
-            "message":str(type(e))+str(e)
+            "message":str(type(e))+"=>"+str(e)
         }
 
 # sub=reddit.subreddit("dankmemes")
