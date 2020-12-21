@@ -1,1 +1,1 @@
-gunicorn  -b 0.0.0.0:42785 app:app
+web: gunicorn  -b 0.0.0.0:42785 app:app
