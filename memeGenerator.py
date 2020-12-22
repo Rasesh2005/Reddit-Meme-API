@@ -12,6 +12,7 @@ TOPICS = [  # Default Topics When No Topic is given!!
     "memes",
     "AdviceAnimals",
     "MemeEconomy"
+    "me_irl"
 ]
 
 
@@ -25,7 +26,7 @@ def ScrapMemes(topic=0, num=1):
         if num <= 0:
             return {
                 "code": 400,
-                "message": "Enter a positive Integer less than 200"
+                "message": "Enter a positive Number less than 200"
             }
         result = {}
         num = num % 200

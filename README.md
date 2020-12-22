@@ -25,6 +25,7 @@ API Link : [https://reddit-meme-api.herokuapp.com/meme_api](https://reddit-meme-
 
 }
 ```
+> Note: While using thw API always confirm that the response for `"code"` is 200, else there is some error!!!
 
 ## Custom Endpoints
 
@@ -32,9 +33,9 @@ API Link : [https://reddit-meme-api.herokuapp.com/meme_api](https://reddit-meme-
 
 In order to get multiple memes in a single request specify the count with the following endpoint.
 
-Endpoint: [/meme_api/{count}](https://reddit-meme-api.herokuapp.com/meme_api/2)
+Endpoint: [/{count}](https://reddit-meme-api.herokuapp.com/2)
 
-Example: [https://reddit-meme-api.herokuapp.com/meme_api/2](https://reddit-meme-api.herokuapp.com/meme_api/2)
+Example: [https://reddit-meme-api.herokuapp.com/2](https://reddit-meme-api.herokuapp.com/2)
 
 Response:
 
@@ -81,14 +82,15 @@ Response:
 
 }
 ```
+> Not all memes have image preview so it is suggested to use the `"url"` endpoint's result
 
 ### Specify Subreddit
 
 By default the API grabs a random meme from '_memes_', '_dankmemes_', '_AdviceAnimals_','_MemeEconomy_' subreddits. To provide your own custom subreddit use the following endpoint.
 
-Endpoint: [/meme_api/{subreddit}](https://reddit-meme-api.herokuapp.com/meme_api/wholesomememes)
+Endpoint: [/{subreddit}](https://reddit-meme-api.herokuapp.com/wholesomememes)
 
-Example: [https://reddit-meme-api.herokuapp.com/meme_api/wholesomememes](https://reddit-meme-api.herokuapp.com/meme_api/wholesomememes)
+Example: [https://reddit-meme-api.herokuapp.com/wholesomememes](https://reddit-meme-api.herokuapp.com/wholesomememes)
 
 Response:
 
@@ -116,9 +118,9 @@ Response:
 
 In order to get a custom number of memes from a specific subreddit provide the name of the subreddit and the count in the following endpoint.
 
-Endpoint: [/meme_api/{subreddit}/{count}](https://reddit-meme-api.herokuapp.com/meme_api/wholesomememes/2/)
+Endpoint: [/{subreddit}/{count}](https://reddit-meme-api.herokuapp.com/wholesomememes/2/)
 
-Example: [https://reddit-meme-api.herokuapp.com/meme_api/wholesomememes/2](https://reddit-meme-api.herokuapp.com/meme_api/wholesomememes/2/)
+Example: [https://reddit-meme-api.herokuapp.com/wholesomememes/2](https://reddit-meme-api.herokuapp.com/wholesomememes/2/)
 
 Response:
 
