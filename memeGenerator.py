@@ -11,7 +11,7 @@ TOPICS = [  # Default Topics When No Topic is given!!
     "dankmemes",
     "memes",
     "AdviceAnimals",
-    "MemeEconomy"
+    "MemeEconomy",
     "me_irl"
 ]
 
@@ -38,7 +38,7 @@ def ScrapMemes(topic=0, num=1):
             try:
                 _ = meme.preview
                 result = {
-
+                    "code":200,
                     "post_link": meme.shortlink,
                     "subreddit": topic,
                     "title": meme.title,
