@@ -25,7 +25,7 @@ API Link : [https://reddit-meme-api.herokuapp.com/meme_api](https://reddit-meme-
 
 }
 ```
-> Note: While using thw API always confirm that the response for `"code"` is 200, else there is some error!!!
+> Note: While using the API always confirm that the response for `"code"` is 200, else there is some error!!!
 
 ## Custom Endpoints
 
@@ -86,7 +86,8 @@ Response:
 
 ### Specify Subreddit
 
-By default the API grabs a random meme from '_memes_', '_dankmemes_', '_AdviceAnimals_','_MemeEconomy_' subreddits. To provide your own custom subreddit use the following endpoint.
+By default the API grabs a random meme from '_memes_', '_dankmemes_', '_AdviceAnimals_','_MemeEconomy_','__me_irl__',
+    '_ComedyCemetery_' and '_terriblefacebookmemes_'subreddits. To provide your own custom subreddit use the following endpoint.
 
 Endpoint: [/{subreddit}](https://reddit-meme-api.herokuapp.com/wholesomememes)
 

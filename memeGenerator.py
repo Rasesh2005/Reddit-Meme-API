@@ -12,7 +12,9 @@ TOPICS = [  # Default Topics When No Topic is given!!
     "memes",
     "AdviceAnimals",
     "MemeEconomy",
-    "me_irl"
+    "me_irl",
+    "ComedyCemetery",
+    "terriblefacebookmemes"
 ]
 
 
