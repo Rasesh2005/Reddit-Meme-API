@@ -1,7 +1,7 @@
 # Reddit Meme API
 JSON API for a random meme scraped from reddit.
 
-API Link : [https://reddit-meme-api.herokuapp.com/meme_api](https://reddit-meme-api.herokuapp.com/meme_api)
+API Link : [https://reddit-meme-api.herokuapp.com/](https://reddit-meme-api.herokuapp.com/)
 
 **Example Response:**
 
